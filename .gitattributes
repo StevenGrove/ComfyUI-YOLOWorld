@@ -1,0 +1,9 @@
+weights/yolo_world/v2-l/yolo-world.pt filter=lfs diff=lfs merge=lfs -text
+weights/yolo_world/v2-m/yolo-world.pt filter=lfs diff=lfs merge=lfs -text
+weights/yolo_world/v2-s/yolo-world.pt filter=lfs diff=lfs merge=lfs -text
+weights/yolo_world/v2-x/yolo-world.pt filter=lfs diff=lfs merge=lfs -text
+weights/yolo_world/l/yolo-world.pt filter=lfs diff=lfs merge=lfs -text
+weights/yolo_world/m/yolo-world.pt filter=lfs diff=lfs merge=lfs -text
+weights/yolo_world/s/yolo-world.pt filter=lfs diff=lfs merge=lfs -text
+weights/clip/ViT-B-32/textual.onnx filter=lfs diff=lfs merge=lfs -text
+weights/clip/ViT-B-32/visual.onnx filter=lfs diff=lfs merge=lfs -text

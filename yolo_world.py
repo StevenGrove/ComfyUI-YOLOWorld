@@ -4,7 +4,7 @@ from typing import List
 import torch
 import numpy as np
 import supervision as sv
-from inference.models import YOLOWorld as YOLOWorld_Impl
+from inference.models import YOLOWorld as YOLOWorldImpl
 
 
 class YOLOWorld:
@@ -79,7 +79,9 @@ class YOLOWorld_ModelLoader:
         return dict(
             required=dict(
                 model_id=(
-                    ['yolo_world/l', 'yolo_world/m', 'yolo_world/s'],),
+                     ['yolo_world/v2-x', 'yolo_world/v2-l', 'yolo_world/v2-m',
+                      'yolo_world/v2-s', 'yolo_world/l', 'yolo_world/m',
+                      'yolo_world/s'],),
                 categories=(
                     'STRING', dict(
                         display='Categories',
@@ -95,7 +97,7 @@ class YOLOWorld_ModelLoader:
             self,
             model_id: str,
             categories: str) -> List[torch.nn.Module]:
-        model = YOLOWorld_Impl(model_id=model_id)
+        model = YOLOWorldImpl(model_id=model_id)
         categories = self.process_categories(categories)
         model.set_classes(categories)
         return [model]
